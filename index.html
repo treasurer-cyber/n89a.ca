@@ -323,6 +323,10 @@
     margin-top: 0.2rem;
   }
 
+  .event-date .day.day-range {
+    font-size: 1.05rem;
+  }
+
   .event-info h3 {
     font-family: 'Lora', serif;
     font-size: 1.1rem;
@@ -567,7 +571,11 @@
     .hero-inner { grid-template-columns: 1fr; }
     .two-col { grid-template-columns: 1fr; gap: 2.5rem; }
     .impact-grid { grid-template-columns: 1fr; }
-    .event-item { grid-template-columns: 60px 1fr; }
+    .event-item { grid-template-columns: 68px 1fr; }
+    .event-date { padding: 0.5rem 0.3rem; }
+    .event-date .day { font-size: 1.2rem; }
+    .event-date .day.day-range { font-size: 0.8rem; }
+    .event-date .month { font-size: 0.6rem; }
     .event-tag { display: none; }
     footer { grid-template-columns: 1fr 1fr; }
     .hero-stats { grid-template-columns: 1fr 1fr; }
@@ -664,7 +672,7 @@
 
       <div class="event-item">
         <div class="event-date">
-          <span class="day" style="font-size:1.05rem;">20–22</span>
+          <span class="day day-range">20–22</span>
           <span class="month">Aug</span>
         </div>
         <div class="event-info">
