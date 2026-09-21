@@ -169,12 +169,18 @@
     font-weight: 500;
     font-size: 0.9rem;
     text-decoration: none;
-    margin-left: 1rem;
     transition: border-color 0.2s;
     cursor: pointer; background: none;
   }
 
   .btn-outline:hover { border-color: var(--snow); }
+
+  .hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+  }
 
   .hero-stats {
     display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
@@ -554,6 +560,14 @@
   @media (max-width: 768px) {
     :root { --nav-h: 76px; }
     .nav-logo img { height: 56px; }
+    .hero-buttons { flex-wrap: nowrap; gap: 0.6rem; }
+    .hero-buttons .btn-primary, .hero-buttons .btn-outline {
+      padding: 0.7rem 0.9rem;
+      font-size: 0.8rem;
+      flex: 1 1 0;
+      text-align: center;
+      white-space: nowrap;
+    }
     .nav-toggle { display: flex; }
     .nav-links {
       position: fixed;
@@ -611,8 +625,10 @@
       <div class="hero-text">
         <h1>Good people doing good things <em>north of Hwy 89.</em></h1>
         <p>We're a non-profit built on listening. When residents of North Dufferin identify a need, we work alongside communities, municipalities, and local partners to make it happen.</p>
-        <button class="btn-primary" onclick="show('impact')">See our impact</button>
-        <button class="btn-outline" onclick="show('events')">Upcoming events</button>
+        <div class="hero-buttons">
+          <button class="btn-primary" onclick="show('impact')">See our impact</button>
+          <button class="btn-outline" onclick="show('events')">Upcoming events</button>
+        </div>
       </div>
       <div class="hero-stats">
         <div class="stat">
