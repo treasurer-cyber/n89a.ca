@@ -175,6 +175,8 @@
 
   .btn-outline:hover { border-color: var(--snow); }
 
+  .hero-buttons a.btn-primary { line-height: normal; }
+
   .hero-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -560,7 +562,7 @@
   @media (max-width: 768px) {
     :root { --nav-h: 76px; }
     .nav-logo img { height: 56px; }
-    .hero-buttons { flex-wrap: nowrap; gap: 0.6rem; }
+    .hero-buttons { flex-wrap: wrap; gap: 0.6rem; }
     .hero-buttons .btn-primary, .hero-buttons .btn-outline {
       padding: 0.7rem 0.9rem;
       font-size: 0.8rem;
@@ -568,6 +570,7 @@
       text-align: center;
       white-space: nowrap;
     }
+    .hero-buttons a.btn-primary { flex: 1 0 100%; }
     .nav-toggle { display: flex; }
     .nav-links {
       position: fixed;
@@ -628,6 +631,7 @@
         <div class="hero-buttons">
           <button class="btn-primary" onclick="show('impact')">See our impact</button>
           <button class="btn-outline" onclick="show('events')">Upcoming events</button>
+          <a class="btn-primary" href="https://www.zeffy.com/en-CA/donation-form/north-of-89-alliance-donations" target="_blank" rel="noopener noreferrer">Donate</a>
         </div>
       </div>
       <div class="hero-stats">
